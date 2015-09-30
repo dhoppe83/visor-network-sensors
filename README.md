@@ -36,22 +36,6 @@ Please ensure that a current version of Maven is installed. Moreover, please kee
 There are no further system requirements for using the monitoring framework and the HLRS visor sensors. However, it should be noted that these sensors were tested only for Linux and Windows. As a consequence, we cannot ensure their functionality beyond those operating systems mentioned.
 
 
-## Installation
-```bash
-$ cd /tmp
-$ git clone https://github.com/dhoppe83/visor.git
-$ cd visor
-$ git checkout hlrs-sensors
-$ mvn clean install
-$ unzip visor-service/target/visor.zip -d run
-```
-
-## Run Cloudiator Visor
-```bash
-$ cd run/visor/bin
-$ ./visor.sh -conf ../conf/default.properties
-```
-
 ## Run HLRS Visor Sensors
 Each sensor can be added to the Visor monitoring framework using the RESTful service available per default at __http://0.0.0.0:31415__. The following example shows how to add the __FreeDiskSpaceSensor__ (sensorClassName) to the framework. The sensor is configured via the __contexts__ field to collect the free disk space for the root folder (/) of the underling file system.
 
